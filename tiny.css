@@ -3,12 +3,13 @@ textarea {
   min-height: 250px;
   margin: auto;
   display: inline-block;
-  outline: none;
   font-family: Courier, sans-serif;
   font-size: 14px;
+  width: 100%;
 }
 iframe {
   bottom: 0;
   position: relative;
+  width: 100%;
   height: 35em;
 }
