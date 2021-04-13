@@ -10,7 +10,7 @@ function compile() {
 	    code.open();
 		code.writeln(input.value);
 		code.close();
-		console.log("https://tinycode.aysh.me/?input=" + input.value + "/")
+		console.log("https://tinycode.aysh.me/?input=" + input.value)
 
       };
     };
