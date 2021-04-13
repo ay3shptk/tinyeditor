@@ -8,9 +8,9 @@ function compile() {
 	var code = document.getElementById("code").contentWindow.document;
     document.body.onkeyup = function(){
 	    code.open();
-		code.writeln(input.value);
+		code.writeln(decodeURIComponent(input.value));
 		code.close();
-		console.log("https://tinycode.aysh.me/?input=" + input.value)
+		console.log("https://tinycode.aysh.me/?input=" + encodeURIComponent(input.value))
 
       };
     };
