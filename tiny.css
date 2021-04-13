@@ -3,6 +3,7 @@ textarea {
   min-height: 250px;
   margin: auto;
   display: inline-block;
+  outline: none;
   font-family: Courier, sans-serif;
   font-size: 14px;
 }
