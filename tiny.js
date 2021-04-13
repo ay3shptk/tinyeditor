@@ -6,8 +6,11 @@ if(keyValueArray[0]=="input") { varValue=decodeURIComponent(keyValueArray[1]); d
 function compile() {
 	var input = document.getElementById("input");
 	var code = document.getElementById("code").contentWindow.document;
+	code.open();
+	code.writeln(input.value);
+	code.close();
     document.body.onkeyup = function(){
-	    code.open();
+		code.open();
 		code.writeln(input.value);
 		code.close();
 		console.log("https://tinycode.aysh.me/?input=" + encodeURIComponent(input.value))
