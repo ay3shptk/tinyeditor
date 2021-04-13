@@ -1,0 +1,10 @@
+ <head>
+  	<title>Code Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>textarea{float:top;min-height:250px;margin:auto;display:inline-block;font-family:Courier,sans-serif;font-size:14px;width:100%}iframe{bottom:0;position:relative;width:100%;height:35em}</style>
+  </head>
+  <body>
+    <textarea id="html" placeholder="HTML"></textarea>
+    <iframe id="code"></iframe>
+    <script type="text/javascript">function compile(){var e=document.getElementById("input"),n=document.getElementById("code").contentWindow.document;document.body.onkeyup=function(){n.open(),n.writeln(e.value),n.close()}}compile();</script>
+  </body>
