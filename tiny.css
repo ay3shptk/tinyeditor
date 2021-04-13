@@ -1,0 +1,13 @@
+textarea {
+  float: top;
+  min-height: 250px;
+  margin: auto;
+  display: inline-block;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+}
+iframe {
+  bottom: 0;
+  position: relative;
+  height: 35em;
+}
