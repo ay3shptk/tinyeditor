@@ -19,3 +19,17 @@ function compile() {
     };
 compile();
 
+document.getElementById("download").addEventListener("click", function(){
+    var filename = "index.html";
+    download(filename, "<style>" + style.value + "</style><script>" + script.value + "</script>" + input.value);
+}, false);
+
+function download(filename, text) {
+    var element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("<style>" + style.value + "</style><script>" + script.value + "</script>" + input.value));
+    element.setAttribute('download', filename);
+    element.style.display = 'none';
+    document.body.appendChild(element);
+    element.click();
+    document.body.removeChild(element);
+}
