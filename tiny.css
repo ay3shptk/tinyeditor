@@ -1,15 +1,22 @@
+body{background-color: rgb(54, 54, 54) ;}
 textarea {
+  background-color:#191e22;
+  color: aqua;
   float: top;
   min-height: 250px;
   margin: auto;
   display: inline-block;
   font-family: Courier, sans-serif;
   font-size: 14px;
-  width: 100%;
+  width: 33%;
 }
 iframe {
   bottom: 0;
   position: relative;
   width: 100%;
   height: 35em;
+  background-color: ghostwhite;
 }
+
+
+
