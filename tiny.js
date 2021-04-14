@@ -20,7 +20,7 @@ function compile() {
 compile();
 
 document.getElementById("download").addEventListener("click", function(){
-    var filename = "index.html";
+    var filename = "tinyedit.html";
     download(filename, "<style>" + style.value + "</style><script>" + script.value + "</script>" + input.value);
 }, false);
 
