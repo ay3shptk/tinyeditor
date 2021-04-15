@@ -1,10 +1,11 @@
 var varSection = window.location.search.substr(1);
 var varArray = varSection.split("&");
-for(var v=0; v<varArray.length; v++) { var keyValueArray = varArray[v].split("=");}
-console.log (keyValueArray)
+for(var v=0; v<varArray.length; v++) { var keyValueArray = varArray[v].split("=");
 if(keyValueArray[0]=="input") { varValue=decodeURIComponent(keyValueArray[1]); document.getElementById("input").value=varValue;}
-if(keyValueArray[2]=="style") { varValue=decodeURIComponent(keyValueArray[3]); document.getElementById("style").value=varValue;}
-if(keyValueArray[4]=="script") { varValue=decodeURIComponent(keyValueArray[5]); document.getElementById("script").value=varValue;}
+if(keyValueArray[0]=="style") { varValue=decodeURIComponent(keyValueArray[1]); document.getElementById("style").value=varValue;}
+if(keyValueArray[0]=="script") { varValue=decodeURIComponent(keyValueArray[1]); document.getElementById("script").value=varValue;}
+}
+
 function compile() {
 	var input = document.getElementById("input");
 	var code = document.getElementById("code").contentWindow.document;
@@ -33,4 +34,8 @@ function download(filename, text) {
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
+}
+
+function newpage() {alert("This will open a new tab with your website. Feel free to copy the link and share it with anyone - the webpage is now yours, free forever."); 
+window.open("https://tinycode.aysh.me/share.html?share=" + encodeURIComponent("<style>" + style.value + "</style><script>" + script.value + "</script>" + input.value ), '_blank');
 }
