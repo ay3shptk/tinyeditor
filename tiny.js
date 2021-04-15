@@ -15,9 +15,9 @@ function compile() {
 		code.open();
 		code.writeln("<style>" + style.value + "</style><script>" + script.value + "</script>" + input.value );
 		code.close();
-        console.log("https://tinyeditor.aysh.me/?input=" + encodeURIComponent(input.value) + "&style=" + encodeURIComponent(style.value) + "&script=" + encodeURIComponent(script.value))
+        console.log("https://tinycode.aysh.me/share.html?share=" + encodeURIComponent("<style>" + style.value + "</style><script>" + script.value + "</script>" + input.value ))
       };
-    };
+    }; 
 compile();
 
 document.getElementById("download").addEventListener("click", function(){
