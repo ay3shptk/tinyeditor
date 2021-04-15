@@ -1,7 +1,7 @@
 var varSection = window.location.search.substr(1);
 var varArray = varSection.split("&");
 for(var v=0; v<varArray.length; v++) { var keyValueArray = varArray[v].split("=");
-if(keyValueArray[0]=="input") { varValue=decodeURIComponent(keyValueArray[1]); document.getElementById("input").value=varValue;}
+if(keyValueArray[0]=="share") { varValue=decodeURIComponent(keyValueArray[1]); document.getElementById("share").value=varValue;}
 }
 function compile() {
 	var input = document.getElementById("share");
